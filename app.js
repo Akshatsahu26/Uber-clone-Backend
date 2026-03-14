@@ -4,13 +4,9 @@ import { authRouter } from "./src/modules/auth/auth.routes.js";
 import profileRoutes from "./src/modules/profile/profile.routes.js";
 import journeyRoutes from "./src/modules/journey/journey.routes.js";
 import driverRoutes from "./src/modules/driver/driver.routes.js";
-//
-const app = express();
 
-app.use(cors({
-  origin: ["https://uberrrclone.netlify.app"],
-  credentials: true
-}));
+const app = express();
+app.use(cors());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended:true }));
