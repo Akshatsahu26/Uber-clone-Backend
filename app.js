@@ -6,7 +6,11 @@ import journeyRoutes from "./src/modules/journey/journey.routes.js";
 import driverRoutes from "./src/modules/driver/driver.routes.js";
 //
 const app = express();
-app.use(cors());
+
+app.use(cors({
+  origin: ["https://uberrrclone.netlify.app"],
+  credentials: true
+}));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended:true }));
